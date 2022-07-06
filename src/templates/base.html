@@ -1,0 +1,40 @@
+<html lang="">
+<head lang="en">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/dashboard.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/Chart.css" rel="stylesheet">
+    <link href="/static/css/trayChart.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+    <script src="https://kit.fontawesome.com/de3b308320.js" crossorigin="anonymous"></script>
+
+    <title></title>
+    {% block headInfo %} {% endblock %}
+</head>
+<body>
+<style>
+body {
+  background-color: #e6e7e8;
+  background-attachment: fixed;
+  background-position: right top;
+  background-size: cover;
+}
+</style>
+<div class="d-flex justify-content-center">
+
+</div>
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
+<script src="/static/js/base.js"></script>
+<script src="/static/js/index.js"></script>
+<script src="/static/js/trayChart.js"></script>
+<script src="/static/js/trayControl.js"></script>
+<script src="/static/js/LoadingBarJS/loading-bar.js"></script>
+{% block script %}
+
+{% endblock %}
+{% block additional %}
+{% endblock %}
