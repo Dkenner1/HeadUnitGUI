@@ -8098,6 +8098,12 @@ button.bg-dark:focus {
   box-shadow: none !important;
 }
 
+
+.w-15 {
+  width: 25% !important;
+}
+
+
 .w-25 {
   width: 25% !important;
 }
@@ -8108,6 +8114,10 @@ button.bg-dark:focus {
 
 .w-75 {
   width: 75% !important;
+}
+
+.w-90 {
+  width: 90% !important;
 }
 
 .w-95{
@@ -8126,12 +8136,24 @@ button.bg-dark:focus {
   height: 25% !important;
 }
 
+.h-15{
+    height: 15% !important;
+}
+
+.h-30 {
+  height: 30% !important;
+}
+
 .h-50 {
   height: 50% !important;
 }
 
 .h-75 {
   height: 75% !important;
+}
+
+.h-85 {
+  height: 85% !important;
 }
 
 .h-100 {
@@ -8141,6 +8163,11 @@ button.bg-dark:focus {
 .h-auto {
   height: auto !important;
 }
+
+.min-h50{
+  min-height: 50px !important;
+} 
+
 
 .mw-100 {
   max-width: 100% !important;
@@ -8160,6 +8187,14 @@ button.bg-dark:focus {
 
 .min-vh-100 {
   min-height: 100vh !important;
+}
+
+.vw-15 {
+  width: 15vw !important;
+}
+
+.vw-80 {
+  width: 80vw !important;
 }
 
 .vw-100 {

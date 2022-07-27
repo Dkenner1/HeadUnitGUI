@@ -1,292 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-	<div class="wrapper">
-		<!-- Page Header -->
-		<div class="content-header">
-			<div class="container-fluid">
-				<h1>Dashboard</h1>
-			</div>
-		</div>
-
-		 <!-- Main content -->
-		<section id="trayButtons">
-			<div class="container-fluid">
-				<div class="d-flex justify-content-center">
-					 <div class="container">
-                        <div class="row row-cols-5">
-                            <div class="col">
-                                <div class="fullCard tan">
-                                    <div class="inCard">
-                                        <h6>Tray 1</h6>
-                                        <h6><i>{{ (greenType[1] | string) }}</i></h6>
-                                        {% if times[0] == None  %}
-                                        <div class="progress">
-                                            <div class="progress-bar red" style="width:100%">Run Not Started</div>
-                                        </div>
-                                        {% elif times[0] < 100 %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:{{times[0]}}%">{{times[0]}}%</div>
-                                        </div>
-                                        {% else %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:100%">100% 🌿</div>
-                                        </div>
-                                        {% endif %}
-                                            <button class = "cardButton" onclick="document.location='trayinfo/1'">More info <i class="fa fa-arrow-circle-right" style=color:white;"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="fullCard tan">
-                                    <div class="inCard">
-                                        <h6>Tray 2</h6>
-                                        {% if times[1] == None %}
-                                        <div class="progress">
-                                            <div class="progress-bar red" style="width:100%">Run Not Started</div>
-                                        </div>
-                                        {% elif times[1] < 100 %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:{{times[1]}}%">{{times[1]}}%</div>
-                                        </div>
-                                        {% else %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:100%">100% 🌿</div>
-                                        </div>
-                                        {% endif %}
-                                        <button class="cardButton" onclick="document.location='trayinfo/2'">More info <i class="fa fa-arrow-circle-right" style=color:white;"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="fullCard tan">
-                                    <div class="inCard">
-                                        <h6>Tray 3</h6>
-                                        {% if times[2] == None %}
-                                        <div class="progress">
-                                            <div class="progress-bar red" style="width:100%">No Run Avaliable</div>
-                                        </div>
-                                        {% elif times[2] < 100 %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:{{times[2]}}%">{{times[2]}}%</div>
-                                        </div>
-                                        {% else %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:100%">100% 🌿</div>
-                                        </div>
-                                        {% endif %}
-                                        <button class="cardButton" onclick="document.location='trayinfo/3'">More info <i class="fa fa-arrow-circle-right" style=color:white;"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="fullCard tan">
-                                    <div class="inCard">
-                                            <h6>Tray 4</h6>
-                                        {% if times[3] == None %}
-                                        <div class="progress">
-                                            <div class="progress-bar red" style="width:100%">Run Not Started</div>
-                                        </div>
-                                        {% elif times[3] < 100 %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:{{times[3]}}%">{{times[3]}}%</div>
-                                        </div>
-                                        {% else %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:100%">100% 🌿</div>
-                                        </div>
-                                        {% endif %}
-                                        <button class="cardButton" onclick="document.location='trayinfo/4'">More info <i class="fa fa-arrow-circle-right" style=color:white;"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="fullCard tan">
-								    <div class="inCard">
-                                        <h6>Tray 5</h6>
-                                        {% if times[4] == None %}
-                                        <div class="progress">
-                                            <div class="progress-bar red" style="width:100%">Run Not Started</div>
-                                        </div>
-                                        {% elif times[4] < 100 %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:{{times[4]}}%">{{times[4]}}%</div>
-                                        </div>
-                                        {% else %}
-                                        <div class="progress">
-                                            <div class="progress-bar" style="width:100%">100% 🌿</div>
-                                        </div>
-                                        {% endif %}
-                                        <button class="cardButton" onclick="document.location='trayinfo/5'">More info <i class="fa fa-arrow-circle-right" style=color:white;"></i></button>
-							  	    </div>
-						        </div>
-                            </div>
-                        </div>
-                     </div>
-				</div>
-			</div>
-		</section>
-
-        <div class="container-fluid">
-            <section id = "notifications">
-                <div class="content-header">
-                    <div class="align-content-center">
-                        <h2 style="display: inline-block">Notifications</h2>
-                        <button id="bell" class="notifButton" onclick="toggle()"><i class="fa fa-bell" aria-hidden="true" onclick="onoff(this)"></i></button>
-                    </div>
-                </div>
-
-                <div id="harvest" style="display:block">
-                   <div class="container-fluid">
-                       {%for trayId in range(0,5)%}
-                            {% if times[(trayId | int) - 1] != None and times[(trayId | int) - 1] >= 100 %}
-                                <div class="alert alert-success">
-                                    <p><b>Tray {{(trayId | int )}} ready to harvest!</b></p>
-                                </div>
-                            {% endif %}
-                       {%endfor%}
-                    </div>
-                </div>
-
-                <div id="waterLow" style="display:block">
-                    <div class="container-fluid">
-                        {% if status.water_level is defined and status.water_level == 0 %}
-                        <div class="alert alert-warning">
-                            <p><b>Water level: Below 15%</b></p>
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div id ="weightDisp" style="display:block">
-                    {% for trayId in range(0,5) %}
-                        <div class="container-fluid">
-                            <div class="alert alert-info">
-                                <p><b>Tray {{(trayId | int + 1)}} Weight: {{weights[trayId]}} grams</b></p>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </section>
+<section id="notificationFrame" class="d-flex p-3 align-items-center flex-column h-30 ">
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row justify-content-center datetime">
+            <p>Tuesday: 10/25/2005</p>
         </div>
-
-        <div class="container-fluid">
-            <section id="info">
-                <div class="content-header">
-                    <div class="align-content-center">
-                        <h2>Current Status</h2>
-                    </div>
-                </div>
-            </section>
+        <div class="d-flex flex-row justify-content-center datetime">
+            <div id="hours" class="">1</div>
+            <div>:</div>
+            <div id="minutes" class="">50</div>
+            <div id="meridiem" class="">PM</div>
         </div>
-
-        <div class="container-fluid">
-            <div class="d-flex justify-content-center">
-                <table id="infoTable" style="width:96%">
-                    <tr>
-                        <th>PH</th>
-                        <th>Remaining PH Tank Level</th>
-                        <th>External Temperature</th>
-                        <th>External Humidity</th>
-                    </tr>
-                    <tr>
-                        {% if status.ph is defined %}
-                        <td>{{ status.ph }}</td>
-                        {% else %}
-                        <td> 0.0 </td>
-                        {% endif %}
-
-                        {% if status.ph_pump is defined %}
-                        <td>{{ status.ph_pump }}</td>
-                        {% else %}
-                        <td> 0.0 </td>
-                        {% endif %}
-
-                        {% if status.temperature is defined %}
-                        <td>{{ status.temperature }}</td>
-                        {% else %}
-                        <td> 0.0 </td>
-                        {% endif %}
-
-                        {% if status.humidity is defined %}
-                        <td>{{ status.humidity }}</td>
-                        {% else %}
-                        <td> 0.0 </td>
-                        {% endif %}
-                    </tr>
-                    <tr>
-                        <th>EC</th>
-                        <th>Remaining Nutrient Tank Level</th>
-                        <th>Temperature (Tray 4) </th>
-                        <th>Humidity (Tray 4) </th>
-                    </tr>
-                    <tr>
-                        {% if status.EC is defined %}
-                        <td>{{ status.EC }}</td>
-                        {% else %}
-                        <td> -- </td>
-                        {% endif %}
-
-                        {% if status.ec_pump is defined %}
-                        <td>{{ status.ec_pump }}</td>
-                        {% else %}
-                        <td> -- </td>
-                        {% endif %}
-
-                        {% if status.internal_temperature is defined %}
-                        <td>{{ temps[3] }}</td>
-                        {% else %}
-                        <td> -- </td>
-                        {% endif %}
-
-                        {% if status.humidity %}
-                        <td>{{ hums[3] }}</td>
-                        {% else %}
-                        <td> -- </td>
-                        {% endif %}
-                    </tr>
-                </table>
-            </div>
+        <div class="datetime">
+            <p>Happy Calander Event?</p>
         </div>
+    </div>
+</section>
 
-        <br>
-        <section id="serviceMode">
-            <div class="container-fluid">
-                <div class="d-flex justify-content-center">
-                    <button class="button serviceButton" onclick="document.location='/service'">Service Mode</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="refreshButton">
-            <div class="container-fluid">
-                <div class="d-flex justify-content-center">
-                    <button class="button refreshingBlue" onclick="go_home()">Refresh ↺</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="refreshTime">
-            <div class="container-fluid">
-                <div class="d-flex justify-content-center">
-                    <p>Last Updated: <span id="datetime"></span></p>
-                </div>
-            </div>
-        </section>
-	</div>
-
+<section id="appFrame" class="w-100 flex-grow-1">
+    <div class="basic-grid">
+        <div class="grid-card"><a class="grid-button" href="/maps"><img src="/static/img/maps.png"/></a></div>
+        <div class="grid-card"><a class="grid-button" href="/music"><img class="grid-image" src="/static/img/music.jpg"></a></div>
+        <div class="grid-card"><a class="grid-button" href="/settings"><img src="/static/img/setting.png"/></a></div>
+        <div class="grid-card"><a class="grid-button" href="/calendar"><img src="/static/img/cal.png"/></a></div>
+        <div class="grid-card"><a class="grid-button" href="/youtube"><img src="/static/img/youtube.png"/></a></div>
+        <div class="grid-card"><a class="grid-button" href="/OBD"><img src="/static/img/obd.jpg"/></a></div>
+    </div>
+</section>
 {% endblock %}
-{% block script %}
-    <script>
-      function onoff(x) {
-  x.classList.toggle("far fa-bell");
-}
-    </script>
-{% endblock %}
-
          
 
         

@@ -1,0 +1,43 @@
+.red{
+  background-color: red;
+}
+
+.black{
+  background-color: black;
+}
+
+.white{
+  background-color: white;
+}
+
+.blue{
+  background-color: blue;
+}
+
+.notBlindingYellow {
+    background-color: #E9C46A;
+}
+
+.refreshingBlue {
+    background-color: #787886;
+}
+
+.green {
+    background-color: #008000;
+}
+
+.grey{
+background-color: #C8C8C8;
+}
+
+.yellow {
+background-color: #FFFF00;
+opacity: 0.8
+}
+
+.orange {
+    background-color: #BA5B36;
+    opacity: 0.8;
+}
+
+

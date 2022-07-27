@@ -1,3 +1,23 @@
+:root{
+  font-size: 16px;
+  --top-h: 50px;
+}
+
+
+.top-frame{
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+}
+
+main{
+  position:fixed;
+  top: var(--top-h);
+  height: calc(100% - var(--top-h));
+  width: 100%;
+}
+
+
 .button {
   border: none;
   border-radius: 0.25rem;
@@ -23,21 +43,6 @@ body {
   background-size: cover;
 }
 
-.red{
-  background-color: red;
-}
-
-.black{
-  background-color: black;
-}
-
-.white{
-  background-color: white;
-}
-
-.blue{
-  background-color: blue;
-}
 
 .button2 {
   background-color: white;
@@ -62,28 +67,40 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-
 }
 
-.center-block {
-  display: block;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
-.green {
-    background-color: #008000;
+.btn-wrapper {
+width: 100px;
 }
 
-.chart-container{
-    min-height: 250px;
-    height: 250px;
-    max-height: 250px;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
 
+.muteBtn {
+  background-color: Transparent; /* Blue background */
+  border: none; /* Remove borders */
+  color: black; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
 }
+
+/* Darker background on mouse-over */
+.btn2:hover {
+  background-color: Transparent;
+}
+
 
 .content-header {
   padding: 15px 0.5rem;
@@ -105,6 +122,18 @@ body {
   text-align: center;
 }
 
+.datetime{
+font-family: 'Kyiv*Type Serif';
+font-style: normal;
+font-weight: 350;
+font-size: 40px;
+line-height: 48px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFFFFF
+}
+
 .fullCard > .inCard {
   padding: 10px;
   align-content: center;
@@ -123,86 +152,15 @@ body {
   text-align: center;
 }
 
-.serviceButton {
-  border: none;
-  border-radius: 0.25rem;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #BA5B36;
-  text-align: center;
-  cursor: pointer;
-  width: 95%;
-  font-size: 12px;
-  text-align: center;
-}
-
 .cardButton:hover {
   opacity: 0.7;
 }
 
-.table {
-  border-collapse: collapse;
-  border-radius: 0.25rem;
-  width: 100%;
-  align-content : center;}
-
-  td, th {
-  border: 1px solid black;
-  border-radius: 0.25rem;
-  text-align: center;
-  padding: 8px;
-  }
-
-.tan {
-    background-color: #8D827C;
-    opacity: 0.8;
-
-}
-.progress-green{
-    color: #9EB362;
-}
-.yellow {
-background-color: #FFFF00;
-opacity: 0.8
-}
-
-.orange {
-    background-color: #BA5B36;
-    opacity: 0.8;
-}
 
 tr:nth-child(even) {
   background-color: #94A896;
 }
 
-.h6 {
-    text-align: center;
-    color: white;
-}
-
-.service-field{
-  min-height: 100%;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.service-field-card{
-    border-radius: 2px;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-    box-shadow:         3px 3px 5px 6px #ccc;
-    background-color: #e3e1dc;
-  min-height: 33%;
-  overflow: hidden;
-  width: 100%;
-  padding: 3px
-}
 
 .control-box{
     border-radius: 2px;
@@ -215,36 +173,11 @@ tr:nth-child(even) {
     left: 7.5px;
 }
 
-.header-field{
-  margin: 7.5px;
-}
-.service-field{
-
-}
-
-.refreshingBlue {
-    background-color: #787886;
-}
-
 .dropdown {
     display:inline-block;
     padding:10px;
   }
 
-.notifButton {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    position: relative;
-}
 
-.notBlindingYellow {
-    background-color: #E9C46A;
-}
 
-.noBlend {
-    background-color: #CDC8C6;
-}
+

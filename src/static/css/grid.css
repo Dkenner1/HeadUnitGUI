@@ -1,0 +1,57 @@
+
+.basic-grid {
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-auto-rows: 50%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+ }
+
+.basic-grid::-webkit-scrollbar{
+   width: .25rem;
+}
+
+.basic-grid::-webkit-scrollbar-track{
+   background-color: black;
+}
+
+.basic-grid::-webkit-scrollbar-thumb{
+   background-color: #6649b9;
+}
+
+ .grid-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: all 500ms;
+    background-size: cover;
+ }
+
+.grid-button{
+    padding: 0;
+    height:200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: Transparent;
+ }
+
+ img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+ }
+
+.grid-button:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(3px) scale(1.1);
+ }
+
+
