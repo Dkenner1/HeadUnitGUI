@@ -49,8 +49,23 @@
     background-color: rgba(24, 3, 3, 0.2);
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
+.playlist-wrapper{
+    height: 100%;
+    width: 15%;
+    /*background-color: blue; rgba(24, 3, 3, 0.2);*/
+    border-style: ridge;
+    border-width: small;
+}
 
+.playlist{
+    height: 100%;
+    width: 100%;
+    /*background-color: blue; rgba(24, 3, 3, 0.2);*/
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
 

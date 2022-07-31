@@ -36,8 +36,8 @@
 
 .grid-button{
     padding: 0;
-    height:200px;
-    width: 200px;
+    height: 100px !important;
+    width: 100px !important;
     background-position: center;
     background-repeat: no-repeat;
     background-color: Transparent;
