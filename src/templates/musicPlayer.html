@@ -1,123 +1,46 @@
 {% extends "base.html" %}
 {% block headInfo %} 
 <link href="/static/css/music.css" rel="stylesheet">
-<link
-href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
-rel="stylesheet"
-/>
 {% endblock %}
 
+{% block audioFiles %}
+<source src="https://archive.org/download/calexico2006-12-02..flac16/calexico2006-12-02d1t02.mp3" data-track-number="1" />
+<source src="https://archive.org/download/ra2007-07-21/ra2007-07-21d1t05_64kb.mp3" data-track-number="2" />
+<source src="https://archive.org/download/oar2004-11-12.flac/oar2004-11-12d1t01.mp3" data-track-number="3" />
+<source src="https://archive.org/download/blitzentrapper2009-02-24.flac16/blitzentrapper2009-02-24t02_64kb.mp3" data-track-number="4" />
+<source src="https://archive.org/download/samples2003-11-21.flac16/samples2003-11-21d2t04.mp3" data-track-number="5" />    
+<source src="https://archive.org/download/mikedoughty2004-06-16.flac16/d1t13.mp3" data-track-number="6" />
+<source src="https://archive.org/download/glove2004-03-18.shnf/glove2004-03-18d1t05.mp3" data-track-number="7" />
+<source src="https://archive.org/download/guster2005-11-12.flac16/guster2005-11-12d2t04.mp3" data-track-number="8" />
+<source src="https://archive.org/download/oar2004-11-12.flac/oar2004-11-12d1t01.mp3" data-track-number="9" />
+<source src="https://archive.org/download/mmj2003-09-26.shnf/mmj2003-09-26d2t08.mp3" data-track-number="10" />
+{% endblock %}
+
+
 {% block content %}
-<div class="main-wrapper">
+
+<div class="h-100 w-100">
     <section id="contentFrame" class="d-flex flex-row h-85">
         <nav class="navbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <a href="/" class="nav-btn">
+                        <i class="fa-solid fa-folder-tree nav-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="#" class="nav-btn">
-                    <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fad"
-                        data-icon="angle-double-right"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512"
-                        class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
-                    >
-                        <g class="fa-group">
-                        <path
-                            fill="currentColor"
-                            d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
-                            class="fa-secondary"
-                        ></path>
-                        <path
-                            fill="currentColor"
-                            d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
-                            class="fa-primary"
-                        ></path>
-                        </g>
-                    </svg>
+                        <i class="fa-solid fa-wifi nav-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fad"
-                        data-icon="angle-double-right"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512"
-                        class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
-                    >
-                        <g class="fa-group">
-                        <path
-                            fill="currentColor"
-                            d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
-                            class="fa-secondary"
-                        ></path>
-                        <path
-                            fill="currentColor"
-                            d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
-                            class="fa-primary"
-                        ></path>
-                        </g>
-                    </svg>
+                    <a href="#" class="nav-btn">
+                        <i class="fa-brands fa-usb nav-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/" class="nav-link">
-                    <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fad"
-                        data-icon="angle-double-right"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512"
-                        class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
-                    >
-                        <g class="fa-group">
-                        <path
-                            fill="currentColor"
-                            d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
-                            class="fa-secondary"
-                        ></path>
-                        <path
-                            fill="currentColor"
-                            d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
-                            class="fa-primary"
-                        ></path>
-                        </g>
-                    </svg>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/" class="nav-link">
-                    <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fad"
-                        data-icon="angle-double-right"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512"
-                        class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
-                    >
-                        <g class="fa-group">
-                        <path
-                            fill="currentColor"
-                            d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
-                            class="fa-secondary"
-                        ></path>
-                        <path
-                            fill="currentColor"
-                            d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
-                            class="fa-primary"
-                        ></path>
-                        </g>
-                    </svg>
+                    <a href="/" class="nav-btn">
+                        <i class="fa-solid fa-house nav-icon"></i>
                     </a>
                 </li>
             </ul>
@@ -127,22 +50,84 @@ rel="stylesheet"
                 <ul class="playlist">
                     {% block playlist %}{% endblock %}
                     <li class="playlist-item">
-                       Hello world
+                       <a href="#">All Music</a>
                     </li>
+                    <li class="playlist-item">
+                        <a href="#">EDM</a>
+                     </li>
+                     <li class="playlist-item">
+                        <a href="#">Electro Swing</a>
+                     </li>
                 </ul>
             </div>
-            <div class="songlist-wrapper">
+            <div class="songlist-wrapper w-100">
                 <ul class="songlist">
-                    {% block songs %}{% endblock %}
-                    <li class="song">
-                        The cat strikes back
+                    {% block songs %}
+                    {% endblock %}
+                    <li data-track-row="1">
+                        <a class="song" href="#" data-track="1">
+                            <div class="song-title">TWICE -TT</div>
+                            <div class="song-duration">4:28</div>
+                        </a>
+                    </li>
+                    <li data-track-row="2">
+                        <a class="song" href="#" data-track="2">
+                            <div class="song-title">TWICE -TT 1</div>
+                            <div class="song-duration">4:28</div>
+                        </a>
+                    </li>
+                    <li data-track-row="3">
+                        <a class="song" href="#" data-track="3">
+                            <div class="song-title">TWICE -TT 2</div>
+                            <div class="song-duration">4:28</div>
+                        </a>
+                    </li>
+                    <li data-track-row="4">
+                        <a class="song" href="#" data-track="4">
+                            <div class="song-title">TWICE -TT 3</div>
+                            <div class="song-duration">4:28</div>
+                        </a>
+                    </li>
+                    <li data-track-row="5">
+                        <a class="song" href="#" data-track="5">
+                            <div class="song-title">TWICE -TT 4</div>
+                            <div class="song-duration">4:28</div>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-    <section id="controlFrame" class="d-flex p-3 align-items-center h-15 blue">
-        <div class="grid-card"><a class="grid-button maps-background"></a></div>
+    <section id="controlFrame" class="control-frame">
+        <div id="play-btn" class="d-flex align-items-center justify-content-center">                    
+            <a class="fa-solid fa-play" href="#"></a>
+        </div>
+        <div class="info-box">
+            <div class="info-text w-100 d-flex justify-content-between">
+                <span class="info-title"></span>
+                <div class="info-time">
+                    <span class="current-time">00:00</span> / <span class="duration">00:00</span>
+                </div>
+            </div>
+            <input id="progress-slider" class="w-100" type="range" min="0" max="100" step="0.01" value="0">
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-center">
+            <a id="randomizer" class="fa-solid fa-shuffle text-deselected" href="#"></a>
+        </div>
     </section>
 </div>
+{% endblock %}
+
+{% block javascript  %}
+<script>
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var player = new audioPlayer();
+    player.initPlayer();
+}, true);
+</script>
+
 {% endblock %}

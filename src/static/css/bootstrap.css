@@ -8100,7 +8100,7 @@ button.bg-dark:focus {
 
 
 .w-15 {
-  width: 25% !important;
+  width: 15% !important;
 }
 
 
@@ -10337,4 +10337,3 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
